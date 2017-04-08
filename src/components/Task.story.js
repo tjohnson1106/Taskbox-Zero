@@ -30,15 +30,15 @@ storiesOf('Task', module)
   .addDecorator(story => (
     <div className="list-items" style={{ background: 'white' }}>{story()}</div >
     ))
-    .add('inbox task', () = > buildStory({
+    .add('inbox task', () => buildStory({
         state: 'TASK_INBOX'
     }))
-    .add('snoozed task', () = > buildStory({
+    .add('snoozed task', () => buildStory({
         state: 'TASK_SNOOZED'
     }))
-    .add('pinned task', () = > buildStory({
+    .add('pinned task', () => buildStory({
         state: 'TASK_PINNED'
     }))
-    .add('archived task', () = > buildStory({
+    .add('archived task', () => buildStory({
         state: 'TASK_ARCHIVED'
     }));

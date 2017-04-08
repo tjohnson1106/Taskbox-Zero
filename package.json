@@ -4,12 +4,14 @@
   "private": true,
   "dependencies": {
     "graphql": "^0.9.2",
+    "graphql-anywhere": "^3.0.1",
+    "graphql-tag": "^2.0.0",
     "react": "^15.5.3",
     "react-dom": "^15.5.3"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5",
-    "@kadira/storybook": "^2.21.0"
+    "@kadira/storybook": "^2.21.0",
+    "react-scripts": "0.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
