@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "storyshots": "^3.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,5 +21,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
+  },
+  "babel": {
+    "presets": [ "react-app"]
   }
 }
