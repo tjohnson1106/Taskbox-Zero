@@ -36,4 +36,24 @@ const withData = graphql(
   },
 );
 
-export default withData(Inbox);
+const withOnSnoozeTask = graphql(
+  gql`
+  mutation OnSnoozeTaskMutation($taskId: ObjID!) {
+    updateTask(id: $taskId, input: {
+      state: TASK_SNOOZED
+    }) {
+      ...TaskListTaskFragment
+    }
+  }
+  ${TaskList.fragments.task}
+`,
+  {
+    refetchQueries: ['InboxQuery'],
+    props: ({ mutate }) => ({
+      onSnoozeTask: (taskId) => mutate({ variables: { taskId } }),
+    }),
+  },
+);
+
+
+export default withOnSnoozeTask(withData(Inbox));
